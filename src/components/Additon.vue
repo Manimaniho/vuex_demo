@@ -3,6 +3,8 @@
     <h3>当前最新count值为：{{ $store.state.count }}</h3>
     <button @click="btnHandler1">+1</button>
     <button @click="btnHandler2">+N</button>
+    <button @click="btnHandler3">+1 Async</button>
+
   </div>
 </template>
 <script>
@@ -18,6 +20,10 @@ export default {
     btnHandler2() {
       // commit作用就是调用某个mutation函数
       this.$store.commit('addN', 3)
+    },
+    btnHandler3() {
+      // dispatch作用就是调用某个action函数
+      this.$store.dispatch('addAsync')
     }
   }
 }
