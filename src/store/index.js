@@ -32,6 +32,12 @@ export default new Vuex.Store({
         // 在actions中不能直接修改state中的数据；必须通过context.commit()触发某个mutation才行
         context.commit('add')
       }, 3000)
+    },
+    addNAsync(context, step) {
+      setTimeout(() => {
+        // 在actions中不能直接修改state中的数据；必须通过context.commit()触发某个mutation才行
+        context.commit('addN', step)
+      }, 3000)
     }
   },
   modules: {

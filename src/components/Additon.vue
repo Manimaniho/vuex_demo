@@ -4,6 +4,7 @@
     <button @click="btnHandler1">+1</button>
     <button @click="btnHandler2">+N</button>
     <button @click="btnHandler3">+1 Async</button>
+    <button @click="btnHandler4">+N Async</button>
 
   </div>
 </template>
@@ -24,6 +25,10 @@ export default {
     btnHandler3() {
       // dispatch作用就是调用某个action函数
       this.$store.dispatch('addAsync')
+    },
+    btnHandler4() {
+      // dispatch作用就是调用某个action函数
+      this.$store.dispatch('addNAsync', 5)
     }
   }
 }
