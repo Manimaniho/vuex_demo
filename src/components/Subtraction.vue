@@ -2,6 +2,7 @@
   <div>
     <h3>当前最新count值为：{{ count }}</h3>
     <button @click="btnHandler1">-1</button>
+    <button @click="btnHandler2">-N</button>
   </div>
 </template>
 <script>
@@ -11,9 +12,12 @@ export default {
     return {}
   },
   methods: {
-    ...mapMutations(['sub']),
+    ...mapMutations(['sub', 'subN']),
     btnHandler1() {
       this.sub()
+    },
+    btnHandler2() {
+      this.subN(3)
     }
   },
   computed: {
