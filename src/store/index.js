@@ -13,6 +13,9 @@ export default new Vuex.Store({
     },
     addN(state, step) {
       state.count += step
+    },
+    sub(state) {
+      state.count--
     }
   },
   actions: {
