@@ -12,6 +12,7 @@ export default {
   methods: {
     btnHandler1() {
       // this.$store.state.count++
+      this.$store.commit('add')
     }
   }
 }
