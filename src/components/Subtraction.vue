@@ -4,6 +4,7 @@
     <button @click="btnHandler1">-1</button>
     <button @click="subN(3)">-N</button>
     <button @click="subAsync">-1 Async</button>
+    <button @click="subNAsync(3)">-N Async</button>
   </div>
 </template>
 <script>
